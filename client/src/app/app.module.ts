@@ -11,9 +11,26 @@ import {
   MatToolbarModule, MatButtonModule, MatInputModule, MatFormFieldModule, MatSidenavModule,
   MatIconModule, MatListModule, MatCardModule, MatMenuModule, MatSelectModule, MatSnackBarModule, MatOptionModule, MatCheckboxModule, MatTooltipModule, MatDialogModule } from '@angular/material';
 
+/**
+ * component and services and modules
+ */
+import { LoginComponent } from './components/login/login.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { AuthService } from './services/auth.service';
+import { CategoryService } from './services/category.service';
+import { DashboardModule} from './components/dashboard/dashboard.module';
+import { AuthGuard } from './guard/auth.guard';
+
+const routes: Routes = [
+  { path: 'login', component: LoginComponent },
+  { path: 'sign-up', component: SignUpComponent }
+];
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,
@@ -21,7 +38,7 @@ import {
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    // RouterModule.forRoot(routes, { useHash: false }),
+    RouterModule.forRoot(routes, { useHash: false }),
     BrowserAnimationsModule,
     LayoutModule,
     MatToolbarModule,
@@ -41,8 +58,13 @@ import {
     MatButtonModule,
     MatDialogModule,
     MatIconModule,
+    DashboardModule
   ],
-  providers: [],
+  providers: [
+    AuthService,
+    CategoryService,
+    AuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
