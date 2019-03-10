@@ -1,0 +1,26 @@
+{
+  "ids": {
+    "User": 4,
+    "AccessToken": 2,
+    "ACL": 1,
+    "RoleMapping": 1,
+    "Role": 1,
+    "Category": 1,
+    "Sub-category": 1
+  },
+  "models": {
+    "User": {
+      "1": "{\"username\":\"goodjob\",\"password\":\"$2a$10$1PKxol3ZPKqCwljUPnouvehLg6hZcC7LEC9OmLrKFTvhTSblqk.S.\",\"email\":\"goodjob@shoppinpal.com\",\"id\":1}",
+      "2": "{\"username\":\"you_rock\",\"password\":\"$2a$10$SCW9/Sg1ksyjh6qve6TdsevPMq3ZIAlXu1yEielYQdo9Lqj4sxFvu\",\"email\":\"yourock@shoppinpal.com\",\"id\":2}",
+      "3": "{\"username\":\"Sobhit Kumar\",\"password\":\"$2a$10$AgwO2q1VwuBKNWI8AHCLmuOaUsJBLJ2mFeFi4MQDb9uj8PlWrT./W\",\"email\":\"sobhit2010@gmail.com\",\"id\":3}"
+    },
+    "AccessToken": {
+      "p8paKusDWAWvrJW9kyssKbBQiH2MopnqBVfOXvLmhqM7sS2SeFrsdGoWjkQeEmXF": "{\"id\":\"p8paKusDWAWvrJW9kyssKbBQiH2MopnqBVfOXvLmhqM7sS2SeFrsdGoWjkQeEmXF\",\"ttl\":1209600,\"created\":\"2019-03-10T13:50:31.050Z\",\"userId\":3}"
+    },
+    "ACL": {},
+    "RoleMapping": {},
+    "Role": {},
+    "Category": {},
+    "Sub-category": {}
+  }
+}
