@@ -1,0 +1,14 @@
+.container {
+  margin: 0 auto;
+}
+.login-form {
+  margin: 0 auto;
+  width: 20%;
+  padding: 20px;
+  & h2 {
+    text-align: center;
+  }
+  & .field-width{
+    width: 100%;
+  }
+}
