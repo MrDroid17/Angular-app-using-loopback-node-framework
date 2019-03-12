@@ -1,7 +1,7 @@
 {
   "ids": {
-    "User": 7,
-    "AccessToken": 3,
+    "User": 8,
+    "AccessToken": 4,
     "ACL": 1,
     "RoleMapping": 1,
     "Role": 1,
@@ -13,9 +13,7 @@
       "1": "{\"username\":\"goodjob\",\"password\":\"$2a$10$1PKxol3ZPKqCwljUPnouvehLg6hZcC7LEC9OmLrKFTvhTSblqk.S.\",\"email\":\"goodjob@shoppinpal.com\",\"id\":1}",
       "2": "{\"username\":\"you_rock\",\"password\":\"$2a$10$SCW9/Sg1ksyjh6qve6TdsevPMq3ZIAlXu1yEielYQdo9Lqj4sxFvu\",\"email\":\"yourock@shoppinpal.com\",\"id\":2}",
       "3": "{\"username\":\"Sobhit Kumar\",\"password\":\"$2a$10$AgwO2q1VwuBKNWI8AHCLmuOaUsJBLJ2mFeFi4MQDb9uj8PlWrT./W\",\"email\":\"sobhit2010@gmail.com\",\"id\":3}",
-      "4": "{\"username\":\"jjhjhjhj\",\"password\":\"$2a$10$Lg8kG6cSrZAxyGlFS7y7K.NkjJl5OzcjF/5P/lyJqADe0n7gI7RLW\",\"email\":\"hjhjhjj@gmail.com\",\"id\":4,\"confirm_password\":\"einstein\"}",
-      "5": "{\"username\":\"ghghg\",\"password\":\"$2a$10$dcVr6EE/5pHThkwYRGCPFu4nrY4X5zXNfcQqbYz.YpypshV2eJ8NC\",\"email\":\"ggg@gmail.com\",\"id\":5,\"confirm_password\":\"einstein\"}",
-      "6": "{\"username\":\"jkjkj\",\"password\":\"$2a$10$qBBiO2urCwNRTnlrm8QTbuw0WyaCTLL8ET7T6yBDSUoYC0Y8kcq2y\",\"email\":\"sd@gmail.com\",\"id\":6,\"confirm_password\":\"einstein\"}"
+      "7": "{\"username\":\"skumar\",\"password\":\"$2a$10$jW0cLXHZRsVVyfBaQ0E4ruZyp2S5KqRAhbO1432W37eOpPpcGkJ4.\",\"email\":\"sobhit2011@gmail.com\",\"id\":7,\"confirm_password\":\"einstein\"}"
     },
     "AccessToken": {
       "p8paKusDWAWvrJW9kyssKbBQiH2MopnqBVfOXvLmhqM7sS2SeFrsdGoWjkQeEmXF": "{\"id\":\"p8paKusDWAWvrJW9kyssKbBQiH2MopnqBVfOXvLmhqM7sS2SeFrsdGoWjkQeEmXF\",\"ttl\":1209600,\"created\":\"2019-03-10T13:50:31.050Z\",\"userId\":3}",
