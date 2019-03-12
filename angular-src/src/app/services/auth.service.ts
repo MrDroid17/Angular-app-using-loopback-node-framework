@@ -13,9 +13,7 @@ import { environment } from '../../environments/environment';
 export class AuthService {
   token: any;
   username: string;
-
   regex = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/i;
-
 
   signupForm: FormGroup = new FormGroup({
     id: new FormControl(null),
