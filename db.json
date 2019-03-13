@@ -1,11 +1,11 @@
 {
   "ids": {
     "User": 10,
-    "AccessToken": 27,
+    "AccessToken": 29,
     "ACL": 1,
     "RoleMapping": 1,
     "Role": 1,
-    "Category": 2,
+    "Category": 5,
     "Sub-category": 1
   },
   "models": {
@@ -41,12 +41,18 @@
       "OAOFGbHZqq6EN7WLqvjjcmFC5GMP4vriOgDW1KyjWtf9DJM5etrBcQCTQN3tqYBC": "{\"id\":\"OAOFGbHZqq6EN7WLqvjjcmFC5GMP4vriOgDW1KyjWtf9DJM5etrBcQCTQN3tqYBC\",\"ttl\":1209600,\"created\":\"2019-03-13T18:57:47.192Z\",\"userId\":3}",
       "Uz4rbEDTl7kDPCpAxkqxNMXA6KrKamQFfhGDC8TmEnIQVrTkiHW0rlYzUVLH7Yqw": "{\"id\":\"Uz4rbEDTl7kDPCpAxkqxNMXA6KrKamQFfhGDC8TmEnIQVrTkiHW0rlYzUVLH7Yqw\",\"ttl\":1209600,\"created\":\"2019-03-13T19:05:29.845Z\",\"userId\":3}",
       "gA9cmDyO16hYFrJqsXG1eFEOIXneeGENNd6XeDlkwLYJSCRAmDdh06qz2jbCDolV": "{\"id\":\"gA9cmDyO16hYFrJqsXG1eFEOIXneeGENNd6XeDlkwLYJSCRAmDdh06qz2jbCDolV\",\"ttl\":1209600,\"created\":\"2019-03-13T19:22:06.927Z\",\"userId\":3}",
-      "3fWHAFDcmCeFBgghyDtjLar31robHRQmV7CFJP1ur6bxeMaEpFMe47n75PnBwfID": "{\"id\":\"3fWHAFDcmCeFBgghyDtjLar31robHRQmV7CFJP1ur6bxeMaEpFMe47n75PnBwfID\",\"ttl\":1209600,\"created\":\"2019-03-13T19:27:37.813Z\",\"userId\":3}"
+      "3fWHAFDcmCeFBgghyDtjLar31robHRQmV7CFJP1ur6bxeMaEpFMe47n75PnBwfID": "{\"id\":\"3fWHAFDcmCeFBgghyDtjLar31robHRQmV7CFJP1ur6bxeMaEpFMe47n75PnBwfID\",\"ttl\":1209600,\"created\":\"2019-03-13T19:27:37.813Z\",\"userId\":3}",
+      "GLTef7fxZLO9tLODBKkybD66Zvlt6L9grIijYeDKaYYtRPw1dC246KGTkdfVWoUA": "{\"id\":\"GLTef7fxZLO9tLODBKkybD66Zvlt6L9grIijYeDKaYYtRPw1dC246KGTkdfVWoUA\",\"ttl\":1209600,\"created\":\"2019-03-13T19:56:29.892Z\",\"userId\":3}",
+      "KzeQ4c77UPN6ZPTifvZ27H9KdXQKiLvBYPaYIcemH58jXAL8YAjIgWLJykh31wVz": "{\"id\":\"KzeQ4c77UPN6ZPTifvZ27H9KdXQKiLvBYPaYIcemH58jXAL8YAjIgWLJykh31wVz\",\"ttl\":1209600,\"created\":\"2019-03-13T19:58:25.828Z\",\"userId\":3}"
     },
     "ACL": {},
     "RoleMapping": {},
     "Role": {},
-    "Category": {},
+    "Category": {
+      "2": "{\"name\":\"Funrniture\",\"description\":\"awesome furniture\",\"type\":\"1\",\"id\":2}",
+      "3": "{\"name\":\"Chair\",\"description\":\"medium sized\",\"type\":\"2\",\"id\":3}",
+      "4": "{\"name\":\"Chair \",\"description\":\"medium\",\"type\":\"2\",\"id\":4}"
+    },
     "Sub-category": {}
   }
 }

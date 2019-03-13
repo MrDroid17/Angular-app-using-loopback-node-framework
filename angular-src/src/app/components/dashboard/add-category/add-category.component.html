@@ -1,11 +1,39 @@
 <!-- header -->
 <ul class="breadcrumb">
-  <li>Add Category</li>
+  <li>{{label}}</li>
   <li><a href="/category">Category List</a></li>
   <li><a href="/">Home</a></li>
 </ul>
 <div class="container">
-  add-category
+  <form class="add-category--form mat-elevation-z2" [formGroup]="categoryService.categoryForm">
+      <h3 class="mat-h3">{{label}}</h3>
+    <div>
+      <mat-form-field class="input-field">
+        <input formControlName="name" matInput placeholder="Category name*">
+        <mat-error>Item name is mandatory.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="input-field">
+        <textarea formControlName="description" [maxLength]="70" matInput
+          placeholder=" Item Description here*"></textarea>
+        <mat-error>Item description is mandatory.</mat-error>
+        <mat-hint>Maximum 70 character allowed for description.</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field class="input-field">
+        <mat-select formControlName="type" matInput placeholder="Category type*">
+          <mat-option *ngFor="let type of typeArray" [value]="type.id">
+            {{type.name}}
+          </mat-option>
+        </mat-select>
+        <mat-error>Type is mandatory.</mat-error>
+      </mat-form-field>
+      <div class="button-row">
+          <button mat-raised-button color="warn" type="reset" (click)="onFormReset()">Reset</button>
+          <button mat-raised-button color="primary" type="submit" [disabled]="categoryService.categoryForm.invalid" (click)="addCategory(categoryService.categoryForm.value)">{{saveButton}}</button>
+      </div>
+    </div>
+  </form>
 </div>
 
 

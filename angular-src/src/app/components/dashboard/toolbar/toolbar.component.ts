@@ -39,7 +39,6 @@ export class ToolbarComponent implements OnInit {
   // get user profile
   getProfile(userid) {
     this.categoryService.getUserProfile(userid).subscribe(res => {
-      debugger
       if (res['id']) {
         this.username = res['username'];
       } else {
