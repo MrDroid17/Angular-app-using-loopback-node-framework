@@ -278,9 +278,6 @@ MIT
 @angular/http
 MIT
 
-@angular/router
-MIT
-
 @angular/animations
 MIT
 
@@ -334,6 +331,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
+@angular/router
+MIT
+
 @angular/material/button
 
 @angular/material/snack-bar
@@ -346,7 +346,15 @@ THE SOFTWARE.
 
 @angular/material/icon
 
+@angular/material/table
+
+@angular/material/core
+
 @angular/material/form-field
+
+@angular/material/select
+
+@angular/material/paginator
 
 @angular/material/checkbox
 
