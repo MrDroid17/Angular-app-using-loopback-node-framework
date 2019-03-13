@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  checked = false;
 
   constructor(
     private router: Router,
@@ -15,12 +16,15 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.authService.loginForm.reset();
   }
 
   loginUser(user) {
     this.authService.userLogin(user).subscribe(res => {
+      this.authService.loginForm.reset();
       if (res['id']) {
-        this.router.navigate(['login']);
+        this.authService.storeAdminData(res['id'], res['userId'], this.checked);
+        this.router.navigate(['category']);
       } else {
 
       }

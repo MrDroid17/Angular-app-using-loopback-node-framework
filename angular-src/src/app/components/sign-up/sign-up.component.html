@@ -16,8 +16,9 @@
     </mat-form-field>
     <mat-form-field class="field-width">
       <input matInput type="password" placeholder="Confirm password" formControlName="confirm_password" required matInput>
-      <mat-error *ngIf="authService.signupForm.controls['confirm_password'].errors?.required">Confirm password is required.</mat-error>
-      <mat-error *ngIf="authService.signupForm.controls['password'].value != authService.signupForm.controls['confirm_password'].value">Password and confirm password is different.</mat-error>
+      <mat-error>Confirm password required</mat-error>
+      <!-- <mat-error *ngIf="authService.signupForm.controls['confirm_password'].errors?.required">Confirm password is required.</mat-error> -->
+      <!-- <mat-error *ngIf="authService.signupForm.controls['password'].value != authService.signupForm.controls['confirm_password'].value">Password and confirm password is different.</mat-error> -->
     </mat-form-field>
     <button mat-raised-button class="field-width" color="primary" type="submit" (click)="signupUser(authService.signupForm.value)"
       [disabled]="authService.signupForm.invalid">Sign up</button>

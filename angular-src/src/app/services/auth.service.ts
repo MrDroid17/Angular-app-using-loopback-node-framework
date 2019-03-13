@@ -11,13 +11,13 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class AuthService {
-  token: any;
-  username: string;
+  access_token: any;
+  user_id: string;
   regex = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/i;
 
   signupForm: FormGroup = new FormGroup({
     id: new FormControl(null),
-    username: new FormControl('', Validators.required),
+    user_id: new FormControl('', Validators.required),
     email: new FormControl('', [Validators.required, Validators.pattern(this.regex)]),
     password: new FormControl('', [Validators.required]),
     confirm_password: new FormControl('', [Validators.required]),
@@ -34,6 +34,9 @@ export class AuthService {
    */
   LOGIN_URL: string = environment.serverUrl + '/api/Users/login';
   SIGNUP_URL: string = environment.serverUrl + '/api/Users';
+  GET_USER_PROFILE_URL: string = environment.serverUrl + '/api/Users/';
+  // category url
+
 
 
   constructor(
@@ -41,13 +44,49 @@ export class AuthService {
   ) { }
 
 
+  // store admin data to local storage
+  storeAdminData(access_token, user_id, checked) {
+    if (checked) {
+      localStorage.setItem('access_token', access_token);
+      localStorage.setItem('user_id', user_id);
+    } else {
+      sessionStorage.setItem('access_token', access_token);
+      sessionStorage.setItem('user_id', user_id);
+    }
+  }
+
+  // load token
+  private loadToken() {
+    if (localStorage.getItem('access_token') !== null) {
+      this.access_token = localStorage.getItem('access_token');
+      this.user_id = localStorage.getItem('user_id');
+    } else if (sessionStorage.getItem('access_token') !== null) {
+      this.access_token = sessionStorage.getItem('access_token');
+      this.user_id = sessionStorage.getItem('user_id');
+    } else {
+      this.access_token = '';
+      this.user_id = '';
+    }
+  }
+
+  // clear access_token on logout
+  logout() {
+    this.access_token = null;
+    localStorage.clear();
+    sessionStorage.clear();
+  }
+
+  // get headers
   getHeaders(): any {
-    // this.loadToken();
     const headers = new Headers();
-    // headers.append(HEADERS.AUTHENTICATION_TOKEN_KEY, this.token);
-    // headers.append(HEADERS.STAFF_USER_ID_KEY, this.username);
     headers.append('Content-Type', 'application/json');
     return headers;
+  }
+
+  // get token
+  getToken(){
+    this.loadToken();
+    return this.access_token;
   }
 
   // authenticate

@@ -11,8 +11,8 @@ const routes: Routes = [
     path: '', component: DashboardComponent, canActivate: [AuthGuard], children: [
       { path: '', component: CategoryComponent },
       { path: 'category', component: CategoryComponent },
-      { path: 'category/category-add', component: AddCategoryComponent },
-      { path: 'category/details/:category_id', component: DetailCategoryComponent },
+      { path: 'category/add', component: AddCategoryComponent },
+      { path: 'category/details', component: DetailCategoryComponent },
       { path: 'category/edit/:category_id', component: AddCategoryComponent },
     ]
   }
