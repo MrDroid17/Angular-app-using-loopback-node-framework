@@ -1,10 +1,17 @@
+$accent: #0288d1; // light blue
+
 .container {
   margin: 0 auto;
-  margin-top: 75px;
+  margin: 0;
+  padding-top: 10vh;
+  height: 83vh;
+  width: 96%;
+  background: $accent;
 }
 .sign-up-form {
+  background: white;
   margin: 0 auto;
-  width: 20%;
+  width: 280px;
   padding: 20px;
   & h2,h5, .link {
     text-align: center;
@@ -14,5 +21,15 @@
   }
   & .field-width{
     width: 100%;
+  }
+}
+
+// for mobile screen
+@media (max-width: 360px) {
+  .sign-up-form {
+    margin: 0 auto;
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }

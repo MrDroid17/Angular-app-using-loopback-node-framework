@@ -9,16 +9,23 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
 import {
   MatToolbarModule, MatButtonModule, MatInputModule, MatFormFieldModule, MatSidenavModule,
-  MatIconModule, MatListModule, MatCardModule, MatMenuModule, MatSelectModule, MatSnackBarModule, MatOptionModule, MatCheckboxModule, MatTooltipModule, MatDialogModule } from '@angular/material';
+  MatIconModule, MatListModule, MatCardModule, MatMenuModule, MatSelectModule, MatSnackBarModule, MatOptionModule, MatCheckboxModule, MatTooltipModule, MatDialogModule
+} from '@angular/material';
 
 /**
  * component and services and modules
  */
 import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { DeleteComponent } from './utils/dialog/delete/delete.component';
+import { InfoComponent } from './utils/dialog/info/info.component';
+import { ConfirmationComponent } from './utils/dialog/confirmation/confirmation.component';
+import { ErrorComponent } from './utils/dialog/error/error.component';
+import { DialogService } from './services/dialog.service';
+import { NotificationService } from './services/notification.service';
 import { AuthService } from './services/auth.service';
 import { CategoryService } from './services/category.service';
-import { DashboardModule} from './components/dashboard/dashboard.module';
+import { DashboardModule } from './components/dashboard/dashboard.module';
 import { AuthGuard } from './guard/auth.guard';
 
 const routes: Routes = [
@@ -31,6 +38,10 @@ const routes: Routes = [
     AppComponent,
     LoginComponent,
     SignUpComponent,
+    DeleteComponent,
+    InfoComponent,
+    ConfirmationComponent,
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,8 +74,16 @@ const routes: Routes = [
   providers: [
     AuthService,
     CategoryService,
-    AuthGuard
+    AuthGuard,
+    DialogService,
+    NotificationService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    DeleteComponent,
+    InfoComponent,
+    ConfirmationComponent,
+    ErrorComponent,
+  ]
 })
 export class AppModule { }

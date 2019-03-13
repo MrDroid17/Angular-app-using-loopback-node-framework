@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CategoryService } from 'src/app/services/category.service';
+import { NotificationService } from 'src/app/services/notification.service';
+import { DialogService } from 'src/app/services/dialog.service';
 
 @Component({
   selector: 'app-add-category',
@@ -7,7 +10,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddCategoryComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public categoryService: CategoryService,
+    private notificationService: NotificationService,
+    private dialogService: DialogService
+  ) { }
 
   ngOnInit() {
   }

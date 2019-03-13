@@ -45,4 +45,66 @@ ul.breadcrumb li a:hover {
 color: #01447e;
 text-decoration: underline;
 }
+// End of bread crumbs
+
+/* 
+* custom delete dialog 
+*/
+.confirm-dialog-container .mat-dialog-container {
+    border-radius: 0.25em 0.25em 0.4em 0.4em;
+    padding: 10px;
+}
+
+.confirm-dialog-container .content-container {
+    margin: 5px 5px 15px 15px;
+    color: grey;
+    display: flex;
+}
+
+.confirm-dialog-container #close-icon {
+    margin-left: auto;
+    order: 2;
+    font-weight: bolder;
+}
+
+.container-x {
+    display: flex;
+    justify-content: space-between;
+}
+
+.confirm-dialog-container #no-button {
+    height: 40px;
+    width: 40%;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    border-radius: 4px;
+}
+
+.confirm-dialog-container #yes-button {
+    height: 40px;
+    width: 40%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    border-radius: 4px;
+}
+
+.confirm-dialog-container span.content-span {
+    padding: 15px 15px;
+    text-align: center;
+    font-size: 20px;
+}
+
+#dialog-title {
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    color: $warn; // this is warn color
+}
+/**
+End of custom dialog default style
+*/
 

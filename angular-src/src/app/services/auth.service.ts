@@ -17,7 +17,7 @@ export class AuthService {
 
   signupForm: FormGroup = new FormGroup({
     id: new FormControl(null),
-    user_id: new FormControl('', Validators.required),
+    username: new FormControl('', Validators.required),
     email: new FormControl('', [Validators.required, Validators.pattern(this.regex)]),
     password: new FormControl('', [Validators.required]),
     confirm_password: new FormControl('', [Validators.required]),
@@ -36,8 +36,7 @@ export class AuthService {
   SIGNUP_URL: string = environment.serverUrl + '/api/Users';
   GET_USER_PROFILE_URL: string = environment.serverUrl + '/api/Users/';
   // category url
-
-
+  CATEGORY_URL: string = environment.serverUrl + '/api/Categories';
 
   constructor(
     private http: Http

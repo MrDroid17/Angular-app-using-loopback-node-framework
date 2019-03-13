@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { Router } from '@angular/router';
+import { NotificationService } from 'src/app/services/notification.service';
+import { DialogService } from 'src/app/services/dialog.service';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +14,9 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private router: Router,
-    public authService: AuthService
+    public authService: AuthService,
+    private notificationService: NotificationService,
+    private dialogService: DialogService
   ) { }
 
   ngOnInit() {
@@ -24,11 +28,11 @@ export class LoginComponent implements OnInit {
       this.authService.loginForm.reset();
       if (res['id']) {
         this.authService.storeAdminData(res['id'], res['userId'], this.checked);
+        this.notificationService.success('Success', 'Login successfull.');
         this.router.navigate(['category']);
-      } else {
-
       }
-
+    }, error =>{
+      this.dialogService.openErrorDialog(`Error-code: ${error['status']}` + '\n Please Enter correct username and password.');
     });
   }
 
