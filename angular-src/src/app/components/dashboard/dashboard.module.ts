@@ -8,7 +8,7 @@ import { CategoryComponent } from './category/category.component';
 
 import {
   MatToolbarModule, MatButtonModule, MatInputModule, MatFormFieldModule, MatSidenavModule,
-  MatIconModule, MatListModule, MatCardModule, MatMenuModule, MatSelectModule, MatSnackBarModule, MatOptionModule, MatCheckboxModule, MatTooltipModule, MatDialogModule
+  MatIconModule, MatListModule, MatCardModule, MatMenuModule, MatSelectModule, MatSnackBarModule, MatOptionModule, MatCheckboxModule, MatTooltipModule, MatDialogModule, MatTableDataSource, MatPaginatorModule, MatTableModule
 } from '@angular/material';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
@@ -47,7 +47,9 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     MatTooltipModule,
     MatButtonModule,
     MatDialogModule,
-    MatIconModule
+    MatIconModule,
+    MatTableModule,
+    MatPaginatorModule
   ]
 })
 export class DashboardModule { }

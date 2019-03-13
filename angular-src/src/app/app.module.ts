@@ -9,7 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
 import {
   MatToolbarModule, MatButtonModule, MatInputModule, MatFormFieldModule, MatSidenavModule,
-  MatIconModule, MatListModule, MatCardModule, MatMenuModule, MatSelectModule, MatSnackBarModule, MatOptionModule, MatCheckboxModule, MatTooltipModule, MatDialogModule
+  MatIconModule, MatListModule, MatCardModule, MatMenuModule, MatSelectModule, MatSnackBarModule, MatOptionModule, MatCheckboxModule, MatTooltipModule, MatDialogModule, MatTableDataSource, MatTableModule, MatPaginatorModule
 } from '@angular/material';
 
 /**
@@ -69,7 +69,9 @@ const routes: Routes = [
     MatButtonModule,
     MatDialogModule,
     MatIconModule,
-    DashboardModule
+    DashboardModule,
+    MatTableModule,
+    MatPaginatorModule
   ],
   providers: [
     AuthService,

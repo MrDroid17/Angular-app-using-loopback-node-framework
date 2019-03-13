@@ -22,7 +22,7 @@
 
       <mat-form-field class="input-field">
         <mat-select formControlName="type" matInput placeholder="Category type*">
-          <mat-option *ngFor="let type of typeArray" [value]="type.id">
+          <mat-option *ngFor="let type of typeArray" [value]="type.name">
             {{type.name}}
           </mat-option>
         </mat-select>
@@ -30,7 +30,7 @@
       </mat-form-field>
       <div class="button-row">
           <button mat-raised-button color="warn" type="reset" (click)="onFormReset()">Reset</button>
-          <button mat-raised-button color="primary" type="submit" [disabled]="categoryService.categoryForm.invalid" (click)="addCategory(categoryService.categoryForm.value)">{{saveButton}}</button>
+          <button mat-raised-button color="primary" type="submit" [disabled]="categoryService.categoryForm.invalid" (click)="saveCategory(categoryService.categoryForm.value)">{{saveButton}}</button>
       </div>
     </div>
   </form>
@@ -39,7 +39,7 @@
 
 <!-- footer -->
 <ul class="breadcrumb bottom">
-  <li>Add Category</li>
+  <li>{{label}}</li>
   <li><a href="/category">Category List</a></li>
   <li><a href="/">Home</a></li>
 </ul>

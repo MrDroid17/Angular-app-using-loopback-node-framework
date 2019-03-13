@@ -5,7 +5,7 @@
     "ACL": 1,
     "RoleMapping": 1,
     "Role": 1,
-    "Category": 5,
+    "Category": 9,
     "Sub-category": 1
   },
   "models": {
@@ -49,9 +49,9 @@
     "RoleMapping": {},
     "Role": {},
     "Category": {
-      "2": "{\"name\":\"Funrniture\",\"description\":\"awesome furniture\",\"type\":\"1\",\"id\":2}",
-      "3": "{\"name\":\"Chair\",\"description\":\"medium sized\",\"type\":\"2\",\"id\":3}",
-      "4": "{\"name\":\"Chair \",\"description\":\"medium\",\"type\":\"2\",\"id\":4}"
+      "6": "{\"name\":\"default\",\"description\":\"Lorem ipsum\",\"type\":\"hybrid\",\"id\":6}",
+      "7": "{\"name\":\"Table\",\"description\":\"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do\",\"type\":\"hybrid\",\"id\":7}",
+      "8": "{\"name\":\"default\",\"description\":\"ghghgh\",\"type\":\"global\",\"id\":8}"
     },
     "Sub-category": {}
   }

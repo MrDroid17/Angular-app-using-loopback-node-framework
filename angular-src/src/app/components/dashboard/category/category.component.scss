@@ -3,3 +3,50 @@
   bottom: 50px;
   right: 50px;
 }
+
+// table styling
+// mat-table styling
+mat-basic-chip {
+  padding: 2px;
+  width: 90px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.hide {
+  display: none;
+}
+
+mat-footer-row mat-footer-cell {
+  justify-content: center;
+  font-style: italic;
+}
+
+.table{
+  width: 85%;
+}
+
+.align-center {
+ width: 50%;
+}
+
+#align-status {
+  padding: 0px;
+}
+
+.description{
+  width: 50%;
+}
+
+mat-cell,
+mat-header-cell {
+  padding-left: 10px;
+  font-size: 18px;
+}
+
+mat-paginator {
+  margin-bottom: 100px;
+}

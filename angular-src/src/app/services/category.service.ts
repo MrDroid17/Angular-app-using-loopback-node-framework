@@ -30,24 +30,38 @@ export class CategoryService {
   }
 
   // add category
-  addCategory(category){
+  addCategory(category) {
     const headers = this.authService.getHeaders();
     const ACCESS_TOKEN = this.authService.getToken();
-    return this.http.post(this.authService.CATEGORY_URL + `?access_token=${ACCESS_TOKEN}`, category,{ headers: headers }).pipe(map(res => res.json()));
+    return this.http.post(this.authService.CATEGORY_URL + `?access_token=${ACCESS_TOKEN}`, category, { headers: headers }).pipe(map(res => res.json()));
   }
 
   // edit category
-  editCategory(category){
+  editCategory(category) {
     const headers = this.authService.getHeaders();
     const ACCESS_TOKEN = this.authService.getToken();
-    return this.http.put(this.authService.CATEGORY_URL + `?access_token=${ACCESS_TOKEN}`, category,{ headers: headers }).pipe(map(res => res.json()));
+    return this.http.put(this.authService.CATEGORY_URL + `?access_token=${ACCESS_TOKEN}`, category, { headers: headers }).pipe(map(res => res.json()));
   }
 
   // delete category
-  deleteCategory(category_id){
+  deleteCategory(category_id) {
     const headers = this.authService.getHeaders();
     const ACCESS_TOKEN = this.authService.getToken();
-    return this.http.delete(this.authService.CATEGORY_URL + category_id + `?access_token=${ACCESS_TOKEN}`,{ headers: headers }).pipe(map(res => res.json()));
+    return this.http.delete(this.authService.CATEGORY_URL+ '/' + category_id + `?access_token=${ACCESS_TOKEN}`, { headers: headers }).pipe(map(res => res.json()));
+  }
+
+  // get all categories
+  getAllCategories() {
+    const headers = this.authService.getHeaders();
+    const ACCESS_TOKEN = this.authService.getToken();
+    return this.http.get(this.authService.CATEGORY_URL + `?access_token=${ACCESS_TOKEN}`, { headers: headers }).pipe(map(res => res.json()));
+  }
+
+  // get all category
+  getCategory(category_id){
+    const headers = this.authService.getHeaders();
+    const ACCESS_TOKEN = this.authService.getToken();
+    return this.http.get(this.authService.CATEGORY_URL + '/' + category_id + `?access_token=${ACCESS_TOKEN}`, { headers: headers }).pipe(map(res => res.json()));
   }
 
 }
