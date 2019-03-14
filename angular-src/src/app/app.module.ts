@@ -27,6 +27,7 @@ import { AuthService } from './services/auth.service';
 import { CategoryService } from './services/category.service';
 import { DashboardModule } from './components/dashboard/dashboard.module';
 import { AuthGuard } from './guard/auth.guard';
+import { ValidationService } from './services/validation.service';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -78,7 +79,8 @@ const routes: Routes = [
     CategoryService,
     AuthGuard,
     DialogService,
-    NotificationService
+    NotificationService,
+    ValidationService
   ],
   bootstrap: [AppComponent],
   entryComponents: [
